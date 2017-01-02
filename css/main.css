@@ -1,0 +1,166 @@
+/**
+ * spinner
+ */
+.spinner {
+  display: inline-block;
+}
+@-webkit-keyframes spin {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+.spinner .fa {
+  -webkit-animation: spin 1s linear infinite;
+  animation: spin 1s linear infinite;
+  margin-right: .25em;
+}
+
+/**
+ * site-header
+ */
+.site-header {
+  position: relative;
+}
+.site-header .navbar {
+  margin-bottom: 0;
+}
+.site-header .spinner {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  color: #fff;
+}
+
+/**
+ * site-main
+ */
+.site-main {
+}
+
+/**
+ * site-footer
+ */
+.site-footer {
+  margin-top: 2em;
+}
+
+/**
+ * landing
+ */
+.site-main .latest-documents {
+  margin-bottom: 2em;
+}
+.site-main .latest-documents .document {
+  margin-bottom: 1em;
+}
+
+/**
+ * documents
+ */
+.site-main .documents {
+  margin-bottom: 2em;
+}
+.site-main .documents .document {
+  margin-bottom: 1em;
+}
+
+/**
+ * editor
+ */
+.editor-wrapper {
+  padding: 0;
+  height: 100vh;
+}
+/* nav */
+.editor-wrapper .documents-nav {
+  padding: 0;
+  height: 100%;
+  padding-bottom: 5em;
+  overflow-y: auto;
+}
+.editor-wrapper .documents-nav .nav li a {
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+.editor-wrapper .documents-nav .nav li.active a {
+  padding-top: 2em;
+  padding-bottom: 2em;
+  border-left: .5em solid #F77E40;
+}
+/* editor */
+.editor-wrapper .editor {
+  position: relative;
+  height: 100%;
+  padding: 1em;
+  background-color: #141414;
+}
+.editor-wrapper .editor .input {
+  height: 100%;
+  width: 100%;
+  max-width: 960px;
+  padding: 0;
+}
+/* options */
+.editor-wrapper .editor .options {
+  position: absolute;
+  padding: .5em;
+  right: 0;
+  top: 0;
+  opacity: .5;
+}
+.editor-wrapper .editor .options li {
+  display: inline-block;
+}
+.editor-wrapper .editor .options li button .fa {
+  margin-right: .25em;
+}
+.editor-wrapper .editor .options:hover {
+  opacity: 1;
+}
+/* output */
+.editor-wrapper .preview {
+  position: relative;
+  height: 100%;
+  padding: 1em;
+  background-color: #fff;
+}
+.editor-wrapper .preview .output {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+}
+
+/**
+ * auth
+ */
+.auth-container {
+  height: 100vh;
+}
+.auth-form {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 320px;
+}
+
+/**
+ * form
+ */
+.form .form-control.invalid {
+  border-color: #f00;
+  color: #f00;
+}

@@ -1,0 +1,97 @@
+<!doctype html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>FE FW PoC App</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+    <!--[if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <header class="site-header">
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a href="" class="navbar-brand">markdown^</a>
+          </div>
+          <ul class="nav navbar-nav navbar-right text-capitalize">
+            <li><a href="">browse documents</a></li>
+            <li><a href="" class="btn btn-primary">logout</a></li>
+            <li><a href="" class="btn btn-success">+ new document</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <span class="spinner">
+        <i class="fa fa-spinner"></i>
+        <span class="text">Loading...</span>
+      </span>
+    </header>
+
+    <main class="site-main">
+      <div class="editor-wrapper container-fluid">
+        <div class="documents-nav col-md-2">
+          <ul class="nav nav-pills nav-stacked">
+            <li><a href="#">Hello <span class="badge">Private</span></a></li>
+            <li><a href="#">Hello</a></li>
+            <li><a href="#">Hello</a></li>
+            <li class="active"><a href="#">Hello <span class="badge">Private</span></a></li>
+            <li><a href="#">Hello</a></li>
+          </ul>
+        </div>
+        <div class="editor col-md-5">
+          <div id="input" class="input container"># Hello</div>
+          <ul class="options list-unstyled text-right">
+            <li>
+              <button id="toggle-nav" class="btn btn-default btn-sm">
+                <i class="fa fa-window-maximize"></i>
+                <span class="text">Hide Nav</span>
+              </button>
+            </li>
+            <li>
+              <button id="toggle-preview" class="btn btn-default btn-sm">
+                <i class="fa fa-window-close-o"></i>
+                <span class="text">Hide Preview</span>
+              </button>
+            </li>
+            <li>
+              <button id="toggle-private" class="btn btn-default btn-sm">
+                <i class="fa fa-eye-slash"></i>
+                <span class="text">Make private</span>
+              </button>
+            </li>
+            <li>
+              <button id="download" class="btn btn-default btn-sm">
+                <i class="fa fa-download"></i>
+                <span class="text">Download</span>
+              </button>
+            </li>
+            <li>
+              <button id="delete" class="btn btn-danger btn-sm">
+                <i class="fa fa-trash"></i>
+                <span class="text">Delete</span>
+              </button>
+            </li>
+          </ul>
+        </div>
+        <div class="preview col-md-5">
+          <div id="output" class="output container"><h1>Hello</h1></div>
+        </div>
+      </div>
+    </main>
+
+    <script src="js/vendor/jquery-3.1.1.js"></script>
+    <script src="js/vendor/ace.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
