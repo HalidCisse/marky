@@ -1,7 +1,7 @@
 {
-  "name": "ng2samples-blank",
-  "version": "0.2.0",
-  "description": "Blank Angular 2 project template",
+  "name": "marky",
+  "version": "0.1.0",
+  "description": "A free web text editor that supports markdown",
   "main": "index.js",
   "scripts": {
     "start": "tsc && concurrently \"tsc -w\" \"npm run serve\" ",
@@ -12,18 +12,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/DenisVuyka/ng2samples-blank.git"
+    "url": "git+https://github.com/HalidCisse/marky.git"
   },
   "keywords": [
-    "angular2",
-    "template"
+    "markdown",
+    "marky"
   ],
-  "author": "Denys Vuika <denys.vuika@gmail.com>",
+  "author": "Halid Cisse <halidoucse@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/DenisVuyka/ng2samples-blank/issues"
+    "url": "https://github.com/HalidCisse/marky/issues"
   },
-  "homepage": "https://github.com/DenisVuyka/ng2samples-blank#readme",
+  "homepage": "https://github.com/HalidCisse/marky#readme",
   "dependencies": {
     "@angular/common": "~2.2.0",
     "@angular/compiler": "~2.2.0",

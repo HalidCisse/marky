@@ -3,7 +3,7 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
+    Halid Cisse -- Dev -- twitter/halidoucse
 
 # THANKS
 
