@@ -1,0 +1,32 @@
+ <main class="site-main">
+      <div class="auth-container">
+        <div class="auth-form container">
+          <h1 class="text-center">Login</h1>
+
+          <form class="form well">
+            <div class="messages text-center">
+              <p class="text-danger">This is an error message</p>
+              <p class="text-success">This is a success message</p>
+            </div>
+
+            <div class="form-group">
+              <label for="login-email-address">Email address</label>
+              <input type="email" class="form-control invalid" id="login-email-address" placeholder="Email">
+              <p class="text-danger">This is a field error message</p>
+            </div>
+            <div class="form-group">
+              <label for="login-password">Password</label>
+              <input type="password" class="form-control" id="login-password" placeholder="Password">
+              <div class="text-right">
+                <a href="">Forgotten password?</a>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-default btn-block">LOGIN</button>
+          </form>
+
+          <div class="well text-center">
+            <a [routerLink]="['/register']" >You don't have an account? click here.</a>
+          </div>
+        </div>
+      </div>
+    </main>

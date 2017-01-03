@@ -4,10 +4,7 @@ import { Component } from '@angular/core';
   selector    : 'marky-register',
   templateUrl : 'marky/register/register.component.html'
 })
-export class HomeComponent { 
-  title = 'marky'; 
+export class RegisterComponent {
+  title = 'marky';
 
-
-
-  
 }
