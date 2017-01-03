@@ -15,6 +15,7 @@
   "exclude": [
     "node_modules",
     "typings",
-    "typings/main.d.ts"
+    "typings/main.d.ts",
+    "**/*.spec.ts"
   ]
 }

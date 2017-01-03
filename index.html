@@ -21,68 +21,17 @@
     <script src="systemjs.config.js"></script>
 
     <script>
-      System.import('app').catch(function(err){ console.error(err); });
+      System.import('marky').catch(function(err){ console.error(err); });
     </script>
 
   </head>
   <body>
-    <!--[if lt IE 8]>
+
+   <!--[if lt IE 8]>
         <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <header class="site-header">
-      <nav class="navbar navbar-default">
-        <div class="container-fluid">
-          <div class="navbar-header">
-            <a href="" class="navbar-brand">markdown^</a>
-          </div>
-          <ul class="nav navbar-nav navbar-right text-capitalize">
-            <li><a href="">browse documents</a></li>
-            <li><a href="" class="btn btn-primary">login</a></li>
-          </ul>
-        </div>
-      </nav>
-    </header>
-
-    <div class="site-hero jumbotron">
-      <div class="container text-center">
-        <h1 class="title text-uppercase">Markdown to Markup</h1>
-        <p class="lead">A free web text editor that supports <em>markdown</em>.</p>
-        <a href="" class="btn btn-primary btn-lg text-uppercase">signup now</a>
-      </div>
-    </div>
-
-    <main class="site-main container">
-      <div class="title row text-center">
-        <h2>Latest public documents</h2>
-      </div>
-
-      <div class="latest-documents row">
-        <div class="document col-lg-6">
-          <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum aspernatur, cumque voluptate sapiente ipsam doloribus eos quisquam, soluta facilis ullam rem, veniam, qui corrupti! Magni reiciendis minus tempora, maxime corporis.</p>
-        </div>
-
-        <div class="document col-lg-6">
-          <h3>Lorem ipsum dolor sit amet.</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam corporis odio iste quidem sint officiis, ex ad! Porro est a, libero dicta molestias totam ab voluptatum sunt perferendis hic quaerat molestiae quod laudantium consectetur expedita ipsum at consequuntur optio. Assumenda repellat quas reiciendis doloremque harum quidem eius dolorum nostrum magnam fugit numquam nesciunt, quos aperiam, voluptate itaque vitae sint unde illum aliquid consequuntur, commodi id aliquam tenetur labore. Soluta, molestiae.</p>
-        </div>
-
-        <div class="document col-lg-6">
-          <h3>Lorem ipsum dolor.</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti amet modi officia vel sint, libero quod beatae delectus accusamus. Repellendus accusantium ex dolorem deleniti, qui non fugiat doloribus harum totam consectetur labore esse nobis consequatur, porro quos quis dolore. Omnis.</p>
-        </div>
-
-        <div class="document col-lg-6">
-          <h3>Lorem ipsum dolor sit.</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam exercitationem et ipsam dolorem, earum blanditiis. Consectetur, quasi animi! Earum ipsa corporis atque veniam nulla impedit, sit cumque sequi amet totam!</p>
-        </div>
-      </div>
-
-      <div class="browse-link row text-center text-capitalize">
-        <a href="" class="btn btn-primary">browse documents</a>
-      </div>
-    </main>
+    <marky-home>Loading marky...</marky-home>
 
     <footer class="site-footer container-fluid text-center">
       <p>made with <i class="fa fa-heart-o"></i> by folks at <a href="">Hidden Founders</a></p>
