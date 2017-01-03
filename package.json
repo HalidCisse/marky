@@ -4,11 +4,13 @@
   "description": "A free web text editor that supports markdown",
   "main": "index.js",
   "scripts": {
-    "start": "tsc && concurrently \"tsc -w\" \"npm run serve\" ",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "serve": "wsrv -s -o -l",
-    "tsc": "tsc",
-    "tsc:w": "tsc -w"
+     "start": "concurrently \"npm run tsc:w\" \"npm run lite\" ", 
+     "tsc": "tsc",
+     "tsc:w": "tsc -w",
+     "lint": "tslint ./app/**/*.ts -t verbose",
+     "lite": "lite-server",
+     "typings": "typings",
+     "postinstall": "typings install"
   },
   "repository": {
     "type": "git",
@@ -23,6 +25,7 @@
   "bugs": {
     "url": "https://github.com/HalidCisse/marky/issues"
   },
+
   "homepage": "https://github.com/HalidCisse/marky#readme",
   "dependencies": {
     "@angular/common": "~2.2.0",
@@ -40,10 +43,12 @@
     "rxjs": "5.0.0-beta.12",
     "zone.js": "^0.6.26"
   },
+
   "devDependencies": {
-    "@types/node": "^6.0.46",
     "concurrently": "^3.1.0",
-    "typescript": "^2.0.10",
-    "wsrv": "^0.1.6"
+    "lite-server": "^2.2.0",
+    "tslint": "^3.7.4",
+    "typescript": "^2.0.2",
+    "typings": "^1.0.4"
   }
 }
