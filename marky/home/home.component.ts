@@ -7,7 +7,7 @@ import { ROUTER_DIRECTIVES } from '@angular/router';
   templateUrl : 'marky/home/home.component.html'
 })
 export class HomeComponent { 
-  title = 'marky'; 
+  pageTitle: string = 'Marky'; 
 
 
 

@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-// import { ROUTER_DIRECTIVES } from '@angular/router';
-
 
 @Component({
   selector: 'marky-app',
@@ -31,7 +29,7 @@ import { Component } from '@angular/core';
      `,
 })
 export class MarkyComponent {
-  title = 'marky';
+  pageTitle: string = 'Marky';
 
 
 

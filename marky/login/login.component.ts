@@ -4,6 +4,6 @@ import { Component } from '@angular/core';
   templateUrl : 'marky/login/login.component.html'
 })
 export class LoginComponent {
-  title = 'marky';
+  pageTitle: string = 'Marky';
 
 }

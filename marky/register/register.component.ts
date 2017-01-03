@@ -5,6 +5,6 @@ import { Component } from '@angular/core';
   templateUrl : 'marky/register/register.component.html'
 })
 export class RegisterComponent {
-  title = 'marky';
+  pageTitle: string = 'Marky';
 
 }
