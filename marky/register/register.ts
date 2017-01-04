@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 
 @Component({
-  templateUrl : 'marky/login/login.component.html'
+  templateUrl : 'marky/register/register.html'
 })
-export class LoginComponent {
+export class RegisterView {
   pageTitle: string = 'Marky';
 
 }

@@ -1,5 +1,5 @@
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
-import { MarkyModule } from './marky.module';
+import { MarkyModule } from './markyModule';
 
 platformBrowserDynamic().bootstrapModule(MarkyModule);

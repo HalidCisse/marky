@@ -28,7 +28,7 @@ import { Component } from '@angular/core';
      </div>
      `,
 })
-export class MarkyComponent {
+export class MarkyApp {
   pageTitle: string = 'Marky';
 
 

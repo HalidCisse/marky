@@ -5,10 +5,10 @@ import { HttpModule }    from '@angular/http';
 import { RouterModule }  from '@angular/router';
 import { APP_BASE_HREF } from '@angular/common';
 
-import { MarkyComponent }    from './marky.app';
-import { HomeComponent }     from './home/home.component';
-import { RegisterComponent } from './register/register.component';
-import { LoginComponent }    from './login/login.component';
+import { MarkyApp }     from './markyApp';
+import { HomeView }     from './home/home';
+import { RegisterView } from './register/register';
+import { LoginView }    from './login/login';
 
 
 @NgModule({
@@ -18,9 +18,9 @@ import { LoginComponent }    from './login/login.component';
     HttpModule,
 
     RouterModule.forRoot([
-        { path: 'home',     component: HomeComponent },
-        { path: 'register', component: RegisterComponent },
-        { path: 'login',    component: LoginComponent },
+        { path: 'home',     component: HomeView },
+        { path: 'register', component: RegisterView },
+        { path: 'login',    component: LoginView },
 
         { path: '',   redirectTo: 'home', pathMatch: 'full' },
         { path: '**', redirectTo: 'home', pathMatch: 'full' }
@@ -28,13 +28,13 @@ import { LoginComponent }    from './login/login.component';
     ],
 
     declarations : [
-        MarkyComponent,
-        HomeComponent,
-        RegisterComponent,
-        LoginComponent
+        MarkyApp,
+        HomeView,
+        RegisterView,
+        LoginView
     ],
 
-    bootstrap : [MarkyComponent],
+    bootstrap : [MarkyApp],
     providers : [{provide: APP_BASE_HREF, useValue : '/' }] ,
 })
 export class MarkyModule {

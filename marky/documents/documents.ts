@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 
 @Component({
-  templateUrl : 'marky/home/home.component.html'
+  templateUrl : 'marky/home/home.html'
 })
-export class HomeComponent { 
+export class HomeView { 
   title = 'documents'; 
 
 
