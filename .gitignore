@@ -10,3 +10,4 @@ node_modules
 *.js
 *.js.map
 !systemjs.config.js
+out/**
