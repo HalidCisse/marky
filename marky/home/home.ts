@@ -2,7 +2,8 @@ import { Component } from '@angular/core';
 
 
 @Component({
-  templateUrl : 'marky/home/home.html'
+  moduleId    : module.id,
+  templateUrl : 'home.html'
 })
 export class HomeView { 
   pageTitle: string = 'Marky'; 
