@@ -31,6 +31,4 @@ import { Component } from '@angular/core';
 export class MarkyApp {
   pageTitle: string = 'Marky';
 
-
-
 }

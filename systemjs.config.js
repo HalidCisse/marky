@@ -27,17 +27,23 @@
       '@angular/upgrade/static': 'npm:@angular/upgrade/bundles/upgrade-static.umd.js',
 
       // other libraries
-      'rxjs':                      'npm:rxjs'
+      'rxjs'   :  'npm:rxjs',
+      'moment' : 'npm:moment'
     },
     // packages tells the System loader how to load when no filename and/or no extension
     packages: {
       app: {
-        main: './main.js',
+        main: './bootstrap.js',
         defaultExtension: 'js'
       },
       rxjs: {
         defaultExtension: 'js'
-      }
+      },
+      'moment': 
+      { 
+        main: 'moment.js', 
+        defaultExtension: 'js' 
+      } 
     }
   });
 })(this);

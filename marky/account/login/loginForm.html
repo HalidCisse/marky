@@ -3,7 +3,8 @@
         <div class="auth-form container">
           <h1 class="text-center">Login</h1>
 
-          <form class="form well">
+          <form class="form well" novalidate (ngSubmit)="onSubmit(userForm)" [formGroup]="userForm">
+            
             <div class="messages text-center">
               <p class="text-danger">This is an error message</p>
               <p class="text-success">This is a success message</p>
@@ -11,17 +12,20 @@
 
             <div class="form-group">
               <label for="login-email-address">Email address</label>
-              <input type="email" class="form-control invalid" id="login-email-address" placeholder="Email">
-              <p class="text-danger">This is a field error message</p>
+              <input type="email" formControlName="email" class="form-control" id="login-email-address" placeholder="Email">
+              <p class="text-danger" *ngIf="userForm?.get('email').hasError('required') && user?.get('email').touched">
+                Email is required</p>
             </div>
+
             <div class="form-group">
               <label for="login-password">Password</label>
-              <input type="password" class="form-control" id="login-password" placeholder="Password">
+              <input type="password" formControlName="password"  class="form-control" id="login-password" placeholder="Password">
               <div class="text-right">
                 <a href="">Forgotten password?</a>
               </div>
             </div>
-            <button type="submit" class="btn btn-default btn-block">LOGIN</button>
+
+            <button type="submit" [disabled]="userForm.invalid" class="btn btn-default btn-block">LOGIN</button>
           </form>
 
           <div class="well text-center">

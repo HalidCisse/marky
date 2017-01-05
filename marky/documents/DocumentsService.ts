@@ -3,10 +3,10 @@ import { Http, Response }          from '@angular/http';
 import { Headers, RequestOptions } from '@angular/http';
 
 import {Observable} from 'rxjs/Rx';
-import 'rxjs/add/operator/map';
-import 'rxjs/add/operator/catch';
+import 'RxJS/add/operator/map';
+//import 'RxJS/add/operator/catch';
 
-import { Document }       from './Document';
+import { Document }       from '../models/Document';
 
 @Injectable()
 export class DocumentsService {
@@ -14,37 +14,36 @@ export class DocumentsService {
 
   constructor (private http: Http) {}
 
-  getDocuments (): Observable<Document[]> {
-     return this.http.get(this.documentsUrl)
-                     .map((res:Response) => res.json() || { })
-                     .catch((error:any) => Observable.throw(error.json().error || 'Server error')
+  all (onNext: (documents: Document[]) => void) {
+     this.http.get(this.documentsUrl)
+            .map(response => <Document[]>response.json())
+            .retry(2)
+            .subscribe(onNext, error => this.handleError);
   }
 
- addDocument (body: Object): Observable<Document[]> {
-        let bodyString = JSON.stringify(body); 
-        let headers    = new Headers({ 'Content-Type': 'application/json' }); 
-        let options    = new RequestOptions({ headers: headers }); 
+ add (body: Object, onNext: (documents: Document[]) => void) {
+     this.http.post(
+         this.documentsUrl,
+         JSON.stringify(body),
+         new RequestOptions({ headers: new Headers({ 'Content-Type': 'application/json' }) }))
+      .map(response => <Document>response.json())
+      .subscribe(onNext, error => this.handleError);
+}
 
-        return this.http.post(this.documentsUrl, body, options) 
-                         .map((res:Response) => res.json()) 
-                         .catch(this.handleError);
-    }   
+  update (body: Object, onNext: (documents: Document[]) => void) {
+         this.http.put(
+               `${this.documentsUrl}/${body['id']}`,
+               JSON.stringify(body), new RequestOptions({ headers: new Headers({ 'Content-Type': 'application/json' }) }))
+            .map((res: Response) => res.json())
+            .subscribe(onNext, error => this.handleError);
+  }
 
-    updateDocument (body: Object): Observable<Document[]> {
-        let bodyString = JSON.stringify(body);
-        let headers    = new Headers({ 'Content-Type': 'application/json' });
-        let options    = new RequestOptions({ headers: headers });
-
-        return this.http.put(`${this.documentsUrl}/${body['id']}`, body, options) 
-                         .map((res:Response) => res.json()) 
-                         .catch(this.handleError); 
-    }   
-
-    removeDocument (id:string): Observable<Document[]> {
-        return this.http.delete(`${this.documentsUrl}/${id}`) 
-                         .map((res:Response) => res.json()) 
-                         .catch(this.handleError);
-    }   
+  delete (id: string, onNext: (documents: Document[]) => void) {
+       this.http.delete(
+          `${this.documentsUrl}/${id}`)
+          .map((res: Response) => res.json())
+          .subscribe(onNext, error => this.handleError);
+  }
 
   private handleError (error: Response | any) {
     // In a real world app, we might use a remote logging infrastructure

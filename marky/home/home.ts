@@ -5,10 +5,7 @@ import { Component } from '@angular/core';
   moduleId    : module.id,
   templateUrl : 'home.html'
 })
-export class HomeView { 
-  pageTitle: string = 'Marky'; 
+export class HomeView {
+  pageTitle: string = 'Marky';
 
-
-
-  
 }

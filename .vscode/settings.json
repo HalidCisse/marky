@@ -8,6 +8,8 @@
         "**/*.js": {"when": "$(basename).ts"},
         "**/node_modules" :true,
         "**/README.md" :true,
+        "**/tslint.json" :true,
+        "**/typings.json" :true,
         "**/.**" :true,
         "**/npm-debug.log" :true,
         "**/typings" :true
